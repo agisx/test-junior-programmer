@@ -108,7 +108,7 @@ Komponen Volt Livewire ini mengelola semua operasi CRUD untuk tabel produk.
    Menambahkan produk baru dengan validasi dan menampilkan notifikasi toast.
 
 7. **`with`**:
-   Fungsi Volt untuk merender komponen.
+   Fungsi Volt untuk merender komponen. Data tabel produk yang diambil pertama adalah status produk dengan "bisa dijual" namun pengguna dapat memilih kembali di bagian filter.
 
 #### Aturan Validasi:
 ```php
@@ -119,15 +119,43 @@ $validated = $this->validate([
     'status_id' => 'required|exists:status,id_status',
 ]);
 ```
+##### Tampilan Error di Menambahkan dan Mengubah Produk
+![image](https://github.com/user-attachments/assets/ce31fd1d-3715-41d5-8c7f-e77edcdd71df)
 
 ---
 
-## Tangkapan Layar
-### Proses CRUD
-![Screenshot Proses CRUD](path-to-crud-screenshot.png)
+## Tata Cara Menggunakan Dengan Tangkapan Layar
+### Tampilan Tabel
+![image](https://github.com/user-attachments/assets/b4002e82-b8bf-4faa-b4ac-a23db597b812)
 
-### Tabel Produk
-![Screenshot Tabel Produk](path-to-table-screenshot.png)
+### Filter
+1. Klik tombol **filter** diatas tabel
+2. Pilih data yang ingin ditampilkan
+![image](https://github.com/user-attachments/assets/01eab937-399c-4be3-9e89-55047933b106)
+
+### Tampilan Menambahkan Produk
+1. Klik tombol **tambah** diatas tabel
+2. Kemudian isi semua input yang tersedia
+3. Jika sudah dirasa benar, klik simpan
+4. Jika berhasil akan muncul pemberitahuan **Berhasil menambahkan**
+![image](https://github.com/user-attachments/assets/87a31cc0-9963-4736-a3d1-d9525faa1f13)
+![image](https://github.com/user-attachments/assets/335f5bec-72bd-427b-8b47-cd1bd2ca8c74)
+
+### Tampilan Mengubah Produk
+1. Klik tombol **pensil** disalah satu data atau baris
+2. Kemudian ubah bagian yang ingin diubah
+3. Jika sudah dirasa benar, klik simpan perubahan
+4. Jika berhasil akan muncul pemberitahuan **Berhasil mengubah**
+![image](https://github.com/user-attachments/assets/d211a4ce-7e8e-42b4-bcb6-f943d7639bad)
+![image](https://github.com/user-attachments/assets/050fd524-7a1e-428e-b684-d23a58dc9162)
+
+## Tampilan Menghapus Produk
+1. Klik tombol **sampah** disalah satu data atau baris
+2. Akan muncul peringatan
+3. Jika **oke** maka data akan dihapus dan **cancel** untuk membatalkan
+4. Jika berhasil akan muncul pemberitahuan **Berhasil menghapus**
+![image](https://github.com/user-attachments/assets/dc9f7608-2f05-4ae8-b228-cec62630a693)
+![image](https://github.com/user-attachments/assets/fb07a009-5473-479d-94c1-416baa935a64)
 
 ---
 
